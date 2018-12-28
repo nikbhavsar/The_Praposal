@@ -1,0 +1,202 @@
+/* components */
+html  {
+
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    overflow-y: hidden;
+
+}
+body{
+    
+
+    font-family: 'Love Ya Like A Sister', cursive !important;
+
+
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+
+.jumbotron {
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 0 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+   
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+#question{
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+.btn{
+
+    font-family: 'Love Ya Like A Sister', cursive !important;
+    color: darkcyan !important;
+    background-color: pink !important;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.email-check{
+    color: darkcyan;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.output{
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(54, 25, 25, .4);
+    border-radius: 10px;
+}
+
+.c-smileyButton {
+    font-size: 25px;
+    font-weight: 600;
+    color: snow;
+    border: 0;
+    outline: 0;
+    margin-bottom: 10px;
+    height: 2.5em;
+    padding: 0.5em 0.75em;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+    background-color: #e0acf7;
+    box-shadow: 0 0.15em 1em rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .c-smileyButton:hover .c-smileyButton__face::before {
+    content: '\1F618';
+    animation: animate 1.05s infinite;
+  }
+  .c-smileyButton:hover .c-smileyButton__face1::before {
+    content: '\1F61A';
+    animation: animate1 1.05s infinite;
+  }
+  .c-smileyButton::before {
+    content: '';
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .c-smileyButton__face1::before {
+    content: '\1F614';
+  }
+  
+  
+  .c-smileyButton__face::before {
+    content: '\1F614';
+  }
+  
+  .c-smileyButton__hoverListener {
+    position: absolute;
+    cursor: default;
+    z-index: -1;
+  }
+  .c-smileyButton__hoverListener:hover ~ .c-smileyButton__face::before {
+    animation: none;
+
+  }
+  .c-smileyButton__hoverListener:hover ~ .c-smileyButton__face1::before {
+    animation: none;
+  }
+  .c-smileyButton__hoverListener:nth-child(1) {
+    width: 290%;
+    height: 550%;
+  }
+  .c-smileyButton__hoverListener:nth-child(1):hover ~ .c-smileyButton__face::before {
+    content: '\1F60C';
+  }
+  
+  .c-smileyButton__hoverListener:nth-child(2) {
+    width: 190%;
+    height: 330%;
+  }
+  .c-smileyButton__hoverListener:nth-child(2):hover ~ .c-smileyButton__face::before {
+    content: '\1F61A';
+  }
+  
+  
+  @keyframes animate {
+    100% {
+      content: '\1F60A';
+    }
+  }
+
+  @keyframes animate1 {
+    100% {
+      content: '\1F61A';
+    }
+  }
+  
+
+
