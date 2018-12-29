@@ -1,11 +1,11 @@
 
- var i = 0;
+var i = 0;
 
- var answers = [];
- var modal = document.getElementById('myModel');
- var sendButton = document.getElementById("js_send");
+var answers = [];
+var modal = document.getElementById('myModel');
+var sendButton = document.getElementById("js_send");
 
- var arr = [{
+var arr = [{
   background: "https://www.wallpapersrc.com/img/2e9a22d139b543328354b40c5284d915/love-book-decoration-with-rose-blossom-4000x2667.jpg",
   question: "For some people book is the life. I know one of that person who make special place in my life. Can i be the favourite book from your list?"
 }, {
@@ -17,22 +17,28 @@
 }];
 
 
+///////   Function for Getting First Item   /////////
+
 function nextItem() {
 
   if (i === arr.length) {
     return null;
   }
-  i = i + 1; // increase i by one
-
-  return arr[i]; // give us back the item of where we are now
+  i = i + 1;
+  return arr[i];
 
 }
 
 
 window.addEventListener('load', function () {
+
+  //////////    initial value   ////////////
+
   document.getElementById('question').textContent = arr[0].question;
   document.getElementById('jumbotron').style.backgroundImage = "url('" + arr[0].background + "')"
-  // initial value
+
+  ///////////  Click on Will Think Button  ///////////////
+
   document.getElementById('prev_button').addEventListener(
     'click',
     function (e) {
@@ -40,15 +46,17 @@ window.addEventListener('load', function () {
       if (i === arr.length - 1) {
         modal.style.display = "block";
       }
-     
+
+      answers.push("No");
       var next = nextItem();
       document.getElementById('jumbotron').style.backgroundImage = "url('" + next.background + "')";
       document.getElementById('question').textContent = next.question;
-      answers.push("No");
-      console.log(answers);
 
     }
   );
+
+  ///////////  Click on I Will Button  ///////////////
+
 
   document.getElementById('next_button').addEventListener(
     'click',
@@ -57,18 +65,17 @@ window.addEventListener('load', function () {
       if (i === arr.length - 1) {
         modal.style.display = "block";
       }
-     
+      answers.push("Yes");
       var next = nextItem();
       document.getElementById('jumbotron').style.backgroundImage = "url('" + next.background + "')";
       document.getElementById('question').textContent = next.question;
-      answers.push("Yes");
-      console.log(answers);
+
     }
   );
 });
 
 
-//sending Email
+///////        Sending Mail Boiler Plate Code From Post Mail     /////////////////////
 
 
 var form_id_js = "javascript_form";
@@ -86,7 +93,6 @@ function js_onError(error) {
   // remove this to avoid redirect
   window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
 }
-
 
 
 function js_send() {
