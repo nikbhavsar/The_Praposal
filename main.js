@@ -13,7 +13,7 @@ var arr = [{
   question: "I know one foddie person like me. Can i be the favourite topping of her pizza?"
 }, {
   background: "https://5.imimg.com/data5/JM/KI/GLADMIN-35826241/finding-love-on-online-matrimonial-500x500.jpg",
-  question: "I am not perfect and i have not the qualiies which your dream bride has. Can you be my partner , teacher and most important thing my mceal lover for rest of my life?"
+  question: "I am not perfect and i have not the qualiies which your dream partner has. Can you be my partner , teacher and most important thing my mceal lover for rest of my life?"
 }];
 
 
